@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chamantula Pradeep Kumar | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+
   <header>
+    <img src="images/pradeep.jpg" alt="Profile" class="profile-img">
     <h1>Chamantula Pradeep Kumar</h1>
     <nav>
       <a href="#about">About</a>
@@ -20,34 +23,38 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <div>
-      <img src="profile.jpg" alt="Profile Image" class="profile-img">
-      <p>Hello, I’m Pradeep, a fresher looking for opportunities in Cloud & DevOps with practical hands-on experience in AWS, Jenkins, Docker, and more.</p>
-    </div>
+    <p>I am an aspiring DevOps & Cloud Engineer with a strong foundation in automation, cloud deployments, and continuous integration. With hands-on exposure to tools like AWS, Jenkins, Docker, Terraform, and Ansible, I’ve successfully delivered cloud-native deployments and end-to-end CI/CD pipelines. My passion lies in solving real-world infrastructure challenges and contributing to scalable solutions in a fast-paced organization.</p>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <!-- Skills will be rendered here via JS -->
+      <!-- Skill cards will populate here -->
     </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="project-card">
-      <h3>FinanceMe</h3>
-      <p>A banking and finance domain DevOps project using AWS, Docker, Jenkins, and Terraform for infrastructure automation and monitoring with Prometheus and Grafana.</p>
+      <h3>FinanceMe – DevOps Capstone Project</h3>
+      <p>Simulated a real-time banking app using microservices. Designed and deployed a full CI/CD pipeline using Jenkins, Maven, GitHub, Docker, and Terraform. Monitored performance with Prometheus and Grafana.</p>
     </div>
   </section>
 
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:pradeepchamantula@gmail.com">pradeepchamantula@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/chamantulapradeep" target="_blank">linkedin.com/in/chamantulapradeep</a></p>
+    <p>GitHub: <a href="https://github.com/Pradeep-kumar11" target="_blank">github.com/Pradeep-kumar11</a></p>
+    <a href="resume/pradeep-kumar-resume.pdf" class="resume-btn" download>Download Resume</a>
+  </section>
+
   <footer>
-    <p>Connect with me on <a href="https://www.linkedin.com/in/chamantulapradeep" target="_blank">LinkedIn</a></p>
+    <p>&copy; 2025 Chamantula Pradeep Kumar. All rights reserved.</p>
   </footer>
 
-  <!-- Floating Tooltip Container -->
-  <div id="floating-tooltip" class="skill-tooltip" style="display:none;"></div>
+  <!-- 👌 Correct placement of your JS file -->
+  <script src="scripts/skills.js"></script>
 
-  <script src="script.js"></script>
 </body>
 </html>
