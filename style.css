@@ -1,42 +1,17 @@
-.skill-card {
-  background: #e9ecef;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  overflow: visible;
-}
-
-.skill-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.skill-card i {
-  font-size: 30px;
-  margin-bottom: 12px;
-  color: #003366;
-  position: relative;
-  z-index: 2;
-}
-
 .skill-tooltip {
   display: none;
   position: absolute;
-  top: calc(100% + 12px); /* Push below card cleanly */
-  left: 50%;
-  transform: translateX(-50%);
-  background: #222; /* dark theme background */
-  color: #fff; /* white text */
+  background: #222;
+  color: #fff;
   text-align: left;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
   width: 260px;
+  top: 110%; /* push just below the card cleanly */
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 9999;
-  transition: opacity 0.3s ease;
 }
 
 .skill-tooltip ul {
@@ -48,6 +23,25 @@
   margin-bottom: 8px;
   line-height: 1.5;
   color: #fff;
+}
+
+.skill-card {
+  background: #e9ecef;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+  overflow: visible;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+.skill-card i {
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
 .skill-card:hover .skill-tooltip {
