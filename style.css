@@ -1,28 +1,55 @@
-.skill-tooltip {
-  display: none;
-  position: absolute;
-  background: #222;
-  color: #fff;
-  text-align: left;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  width: 260px;
-  top: 110%; /* push just below the card cleanly */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 9999;
-}
-
-.skill-tooltip ul {
-  padding-left: 20px;
+body {
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #333;
 }
 
-.skill-tooltip li {
-  margin-bottom: 8px;
-  line-height: 1.5;
+header {
+  background: #003366;
   color: #fff;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.profile-img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+section {
+  padding: 30px;
+  margin: 10px auto;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  overflow: visible;
 }
 
 .skill-card {
@@ -44,6 +71,62 @@
   margin-bottom: 10px;
 }
 
+.skill-tooltip {
+  display: none;
+  position: absolute;
+  background: #1a1a1a;
+  color: #fff;
+  text-align: left;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  width: 260px;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
 .skill-card:hover .skill-tooltip {
   display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.skill-tooltip ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.skill-tooltip li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.project-card {
+  padding: 15px;
+  background: #f1f1f1;
+  border-left: 5px solid #003366;
+  border-radius: 8px;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #003366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+footer {
+  background: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
 }
