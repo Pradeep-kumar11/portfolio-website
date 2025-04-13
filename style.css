@@ -59,25 +59,24 @@ h2 {
   position: relative;
   transition: transform 0.3s ease;
   overflow: visible;
-  z-index: 1;
 }
 
 .skill-card:hover {
   transform: scale(1.05);
-  z-index: 10;
+  z-index: 20;
 }
 
 .skill-card i {
   font-size: 30px;
   margin-bottom: 10px;
+  z-index: 1;
   position: relative;
-  z-index: 5;
 }
 
 .skill-tooltip {
   display: none;
   position: absolute;
-  background: #222;
+  background: #111;
   color: #fff;
   text-align: left;
   padding: 15px;
@@ -87,8 +86,7 @@ h2 {
   top: 110%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;
-  overflow-wrap: break-word;
+  z-index: 999;
 }
 
 .skill-card:hover .skill-tooltip {
