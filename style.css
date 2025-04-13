@@ -49,7 +49,6 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  overflow: visible;
 }
 
 .skill-card {
@@ -59,7 +58,6 @@ h2 {
   text-align: center;
   position: relative;
   transition: transform 0.3s ease;
-  overflow: visible;
 }
 
 .skill-card:hover {
@@ -74,26 +72,21 @@ h2 {
 .skill-tooltip {
   display: none;
   position: absolute;
-  background: #1a1a1a;
+  background: #222;
   color: #fff;
   text-align: left;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
   width: 260px;
   top: 110%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
 }
 
 .skill-card:hover .skill-tooltip {
   display: block;
-  opacity: 1;
-  visibility: visible;
 }
 
 .skill-tooltip ul {
