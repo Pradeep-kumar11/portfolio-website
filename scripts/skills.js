@@ -146,6 +146,7 @@ const skillsData = [
 
 // Render skills to HTML
 const container = document.querySelector('.skills-grid');
+const floatingTooltip = document.getElementById('floating-tooltip');
 
 skillsData.forEach(skill => {
   const card = document.createElement('div');
@@ -153,11 +154,27 @@ skillsData.forEach(skill => {
   card.innerHTML = `
     <i class="${skill.icon}"></i>
     <h4>${skill.name}</h4>
-    <div class="skill-tooltip">
+  `;
+
+  // Show tooltip on hover
+  card.addEventListener('mouseenter', (e) => {
+    const tooltipContent = `
       <ul>
         ${skill.points.map(point => `<li>${point}</li>`).join('')}
       </ul>
-    </div>
-  `;
+    `;
+    floatingTooltip.innerHTML = tooltipContent;
+    floatingTooltip.style.display = 'block';
+    
+    const rect = card.getBoundingClientRect();
+    floatingTooltip.style.top = `${rect.bottom + window.scrollY + 5}px`;
+    floatingTooltip.style.left = `${rect.left + window.scrollX + rect.width / 2}px`;
+    floatingTooltip.style.transform = 'translateX(-50%)';
+  });
+
+  card.addEventListener('mouseleave', () => {
+    floatingTooltip.style.display = 'none';
+  });
+
   container.appendChild(card);
 });
