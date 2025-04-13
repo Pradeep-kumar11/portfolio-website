@@ -1,40 +1,114 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  background: #f8f9fa;
+  color: #333;
 }
 
 header {
-  background: #333;
+  background: #003366;
   color: #fff;
-  padding: 20px;
   text-align: center;
+  padding: 30px 10px;
 }
 
 nav a {
   color: #fff;
   margin: 0 15px;
   text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.profile-img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 section {
-  padding: 20px;
-  margin: 10px;
+  padding: 30px;
+  margin: 10px auto;
+  max-width: 900px;
   background: #fff;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 h2 {
-  color: #333;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: #e9ecef;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+.skill-card i {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.skill-tooltip {
+  display: none;
+  position: absolute;
+  background: #fff;
+  color: #000;
+  text-align: left;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  width: 250px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.skill-card:hover .skill-tooltip {
+  display: block;
+}
+
+.project-card {
+  padding: 15px;
+  background: #f1f1f1;
+  border-left: 5px solid #003366;
+  border-radius: 8px;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #003366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 footer {
-  text-align: center;
-  padding: 10px;
-  background: #333;
+  background: #003366;
   color: #fff;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  text-align: center;
+  padding: 15px;
 }
